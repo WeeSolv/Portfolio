@@ -17,7 +17,7 @@ class VisionWidget extends StatelessWidget {
             Text(
               "Our Vision",
               style: TextStyle(
-                  color: CustomTheme().buttonColor,
+                  color: CustomTheme().buttonBlue,
                   fontSize: (constraints.maxWidth < 400) ? 14 : 28,
                   fontWeight: FontWeight.w700),
             ),

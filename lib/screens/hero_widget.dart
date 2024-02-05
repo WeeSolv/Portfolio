@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weesolve/utils/theme.dart';
 
 class HeroWidget extends StatelessWidget {
   const HeroWidget({super.key});
@@ -10,7 +11,7 @@ class HeroWidget extends StatelessWidget {
           Alignment.lerp(Alignment.topCenter, Alignment.bottomCenter, 0.3)!,
       children: [
         Image(
-          image: const AssetImage('asset/hello.png'),
+          image: AssetImage(CustomTheme().backgroundImage),
           fit: BoxFit.fitWidth,
           width: MediaQuery.of(context).size.width,
         ),

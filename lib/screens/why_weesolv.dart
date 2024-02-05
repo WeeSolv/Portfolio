@@ -1,62 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:weesolve/widgets/custom_grid_view.dart';
 
 class WhyWeeSolv extends StatelessWidget {
   const WhyWeeSolv({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          "Why WeeSolv",
-          style: TextStyle(
-              color: Colors.white, fontSize: 51, fontWeight: FontWeight.w700),
-        ),
-        Text(
+        LayoutBuilder(builder: (context, constraints) {
+          return Text(
+            "Why WeeSolv",
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: (MediaQuery.of(context).size.width < 700)
+                    ? (MediaQuery.of(context).size.width < 400)
+                        ? (MediaQuery.of(context).size.width < 200)
+                            ? 12
+                            : 17
+                        : 25
+                    : 51,
+                fontWeight: FontWeight.w700),
+          );
+        }),
+        const Text(
           "Unleash your potential",
           style: TextStyle(
               color: Colors.white, fontSize: 14, fontWeight: FontWeight.w200),
         ),
-        Wrap(
-          children: [
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-            MyWidget(),
-          ],
-        )
+        const Flexible(child: CustomGridView())
       ],
-    );
-  }
-}
-
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.all(15.0),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Icon(Icons.abc),
-          Text(
-            "Tailored Solution",
-            textAlign: TextAlign.right,
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w400),
-          ),
-          Text(
-            "Custom software that aligns with your business objectives.",
-            textAlign: TextAlign.right,
-            style: TextStyle(color: Colors.white, fontWeight: FontWeight.w200),
-          )
-        ],
-      ),
     );
   }
 }

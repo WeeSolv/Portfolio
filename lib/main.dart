@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:weesolve/screens/get_started.dart';
 import 'package:weesolve/screens/hero_widget.dart';
 import 'package:weesolve/screens/vision_widget.dart';
 import 'package:weesolve/screens/why_weesolv.dart';
 import 'package:weesolve/utils/theme.dart';
 import 'package:weesolve/widgets/custom_button.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -44,13 +43,19 @@ class HomePage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(right: 20.0),
             child: CustomButton(
-              color: CustomTheme().buttonColor,
+              color: CustomTheme().buttonBlue,
+              text: 'Work for us',
             ),
           )
         ],
       ),
       body: ListView(
-        children: const <Widget>[HeroWidget(), VisionWidget(), WhyWeeSolv()],
+        children: const <Widget>[
+          HeroWidget(),
+          VisionWidget(),
+          WhyWeeSolv(),
+          GetStarted()
+        ],
       ),
     );
   }

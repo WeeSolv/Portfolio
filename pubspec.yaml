@@ -34,6 +34,7 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.9
 
 dev_dependencies:
   flutter_test:
@@ -58,30 +59,35 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - asset/hello.png
-    - asset/camera.svg
-    - asset/smily.svg
+    - assets/hello.png
+    - assets/camera.svg
+    - assets/smily.svg
+    - assets/battery.svg
+    - assets/box.svg
+    - assets/check.svg
+    - assets/cloud.svg
+    - assets/message.svg
 
   fonts:
     - family: Inter
       fonts:
-        - asset: asset/font/Inter-Black.ttf
-        - asset: asset/font/Inter-Bold.ttf
+        - asset: assets/font/Inter-Black.ttf
+        - asset: assets/font/Inter-Bold.ttf
           weight: 700
-        - asset: asset/font/Inter-ExtraBold.ttf
+        - asset: assets/font/Inter-ExtraBold.ttf
           weight: 800
-        - asset: asset/font/Inter-ExtraLight.ttf
+        - asset: assets/font/Inter-ExtraLight.ttf
           weight: 100
-        - asset: asset/font/Inter-Light.ttf
+        - asset: assets/font/Inter-Light.ttf
           weight: 200
-        - asset: asset/font/Inter-Medium.ttf
+        - asset: assets/font/Inter-Medium.ttf
           weight: 300
-        - asset: asset/font/Inter-Regular.ttf
+        - asset: assets/font/Inter-Regular.ttf
           weight: 400
           style: normal
-        - asset: asset/font/Inter-SemiBold.ttf
+        - asset: assets/font/Inter-SemiBold.ttf
           weight: 500
-        - asset: asset/font/Inter-Thin.ttf
+        - asset: assets/font/Inter-Thin.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
