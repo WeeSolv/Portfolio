@@ -13,7 +13,8 @@ Map<String, dynamic> appAsset = {
   'cloud': 'assets/cloud.svg',
   'message': 'assets/message.svg',
   'backgroundImage': 'assets/hello.png',
-  'buttonPurple': 0xFFA855F7
+  'buttonPurple': 0xFFA855F7,
+  'logo': './assets/logo 2.svg'
 };
 
 class CustomTheme {
@@ -21,6 +22,7 @@ class CustomTheme {
   final Color buttonBlue;
   final Color buttonPurple;
   final String backgroundImage;
+  final SvgPicture logo;
   final SvgPicture smily;
   final SvgPicture camera;
   final SvgPicture box;
@@ -30,6 +32,7 @@ class CustomTheme {
   final SvgPicture cloud;
   CustomTheme._(
       {required this.box,
+      required this.logo,
       required this.backgroundImage,
       required this.message,
       required this.check,
@@ -41,6 +44,11 @@ class CustomTheme {
       required this.camera,
       required this.smily});
   factory CustomTheme._fromJson(Map<String, dynamic> json) => CustomTheme._(
+      logo: SvgPicture.asset(
+        json['logo'],
+        width: 50,
+        height: 50,
+      ),
       backgroundImage: json['backgroundImage'],
       box: SvgPicture.asset(json['box']),
       message: SvgPicture.asset(json['message']),

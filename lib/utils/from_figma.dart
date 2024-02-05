@@ -1,4 +1,4 @@
-/// From old figma design(Don't use)
+// From old figma design(Don't use)
 
 // ignore_for_file: avoid_unnecessary_containers
 

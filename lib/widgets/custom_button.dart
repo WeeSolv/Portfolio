@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.color, required this.text});
@@ -8,7 +9,9 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FilledButton(
-        onPressed: () {},
+        onPressed: () {
+          launchUrl(Uri.parse('https://forms.gle/La1BoFA2pABjiVAC8'));
+        },
         style: ButtonStyle(
             shape: MaterialStateProperty.resolveWith((states) =>
                 const RoundedRectangleBorder(

@@ -34,9 +34,19 @@ class HomePage extends StatelessWidget {
         scrolledUnderElevation: 0,
         toolbarHeight: 59,
         backgroundColor: CustomTheme().primary,
-        title: const Text(
-          "WeeSolv",
-          style: TextStyle(color: Colors.white, fontSize: 14),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            CustomTheme().smily,
+            const Padding(
+              padding: EdgeInsets.only(left: 8.0),
+              child: Text(
+                "WeeSolv",
+                style: TextStyle(color: Colors.white, fontSize: 14),
+              ),
+            ),
+          ],
         ),
         centerTitle: true,
         actions: [

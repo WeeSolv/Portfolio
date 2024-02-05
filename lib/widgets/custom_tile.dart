@@ -20,8 +20,14 @@ class CustomTile extends StatelessWidget {
               width: constraints.maxWidth * 0.3,
               child: Text(
                 leading,
-                style: const TextStyle(
-                    fontSize: 96,
+                style: TextStyle(
+                    fontSize: (constraints.maxWidth < 700)
+                        ? (constraints.maxWidth < 400)
+                            ? (constraints.maxWidth < 200)
+                                ? 12
+                                : 25
+                            : 51
+                        : 96,
                     fontWeight: FontWeight.w700,
                     color: Colors.white),
               ),
