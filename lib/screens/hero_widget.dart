@@ -21,7 +21,7 @@ class HeroWidget extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  "Innovative Text Solutions",
+                  "Innovative Tech Solutions",
                   style: TextStyle(color: Colors.white, fontSize: 96),
                 ),
                 Text(
